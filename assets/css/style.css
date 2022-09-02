@@ -1,0 +1,329 @@
+/* spectial css */
+
+.clear {
+    clear: both;
+}
+
+.white-text {
+    color: white !important;
+}
+
+
+/* reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, tròn vuông)
+*/
+
+#main {}
+
+
+/* ------------------ Header ------------------ */
+
+#header {
+    background-image: linear-gradient(-45deg, #30d058 0%, #1795cf 10%, #000 80%);
+    /* background-color: black; */
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+    list-style: none;
+}
+
+#nav>li>a {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 24px;
+    line-height: 46px;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav>li:hover>a,
+#nav .subnav>li:hover>a {
+    color: #000;
+    background-color: rgba(188, 253, 253, 0.666);
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    display: block;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-icon {
+    font-size: 14px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-btn {
+    float: right;
+}
+
+.search-btn .search-icon {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    line-height: 46px;
+    padding: 0px 20px;
+}
+
+
+/* ------------------ Slider ------------------ */
+
+#slider {
+    background-color: #fff;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)), url(/assets/img/slider.png) top center /cover no-repeat;
+    position: relative;
+}
+
+#slider .slider-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 65%;
+    text-align: center;
+    /*  */
+    /* Làm chữ gradient */
+    background: linear-gradient(-45deg, #4fe2ff 20%, #2ee788 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#slider .img-content {
+    size: 20px;
+}
+
+#slider .header-content {
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+
+#slider .text-content {
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+/* ------------------ Content ------------------ */
+
+#content {
+    background-color: #ffffff;
+    height: 1000px;
+}
+
+#content .section-content {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0;
+    text-align: center;
+}
+
+.section-content .header-content {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-content .subheader-content {
+    font-weight: 400;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.section-content .text-content {
+    text-align: justify;
+    line-height: 1.5rem;
+    margin: 20px 0;
+}
+
+
+/* member list */
+
+.member-list {
+    margin: 3rem 0;
+    /* Xử lý tương tự clear: both xử lý lỗi float: left */
+    /* overflow: hidden;  */
+}
+
+.member-list .member-item {
+    display: inline;
+    float: left;
+    width: calc(100%/3);
+}
+
+.member-list .member-name {
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.member-list .member-img {
+    width: 80%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+/* hiring */
+
+.hiring-content {
+    background-image: linear-gradient(65deg, #30d058 0%, #1795cf 5%, #000 20%);
+}
+
+.hiring-content .hiring-list {
+    text-align: left;
+    margin-top: 46px;
+}
+
+.hiring-list li {
+    list-style: none;
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hiring-list .full-slot {
+    background-color: #F44336;
+    padding: 3px 6px;
+    margin: 0 16px;
+    color: #ffffff;
+}
+
+.hiring-list .quantity {
+    background-color: #000;
+    color: #fff;
+    float: right;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -1px;
+}
+
+
+/* hiring place */
+
+.hiring-section .place-list {
+    margin: 20px -13px;
+    display: flex;
+}
+
+.place-list .place-item {
+    margin: 0 auto;
+    float: left;
+    width: 30%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.place-item .img-place {
+    width: 100%;
+    display: block;
+}
+
+.place-item .img-place:hover {
+    opacity: 70%;
+    /* cursor: pointer; */
+}
+
+.place-item .place-info {
+    /* height: 60%; */
+    padding: 16px;
+    background-color: #fff;
+}
+
+.place-info .hiring-position {
+    font-weight: 600;
+    margin: 0px 0 10px;
+}
+
+.place-info .place-text {
+    margin: 10px 0;
+    color: #757575;
+    font-style: italic;
+}
+
+.place-info .description {
+    margin: 10px 0;
+    height: 75px;
+    line-height: 1.4;
+}
+
+.place-info .apply-btn {
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 15px 0;
+    border-radius: 0.3rem;
+    line-height: 1rem;
+    margin-left: 28%;
+}
+
+.place-info .apply-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#footer {}
