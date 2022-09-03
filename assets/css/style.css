@@ -413,11 +413,14 @@ html {
 #footer {
     color: rgb(255, 255, 255);
     background-image: linear-gradient(-35deg, #30d058 0%, #1795cf 7%, #000 40%);
-    padding: 15px 20px;
+    padding: 15px 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
+
+/* 
 #footer a {
     text-decoration: none;
 }
@@ -425,6 +428,10 @@ html {
 #footer i[class*="ti-"] {
     color: #ddd;
 }
+
+#footer .copyright {
+    margin-top: 10px;
+} */
 
 
 /* modal */
