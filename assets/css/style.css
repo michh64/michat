@@ -1,15 +1,79 @@
-/* spectial css */
+/* common css */
 
 .clear {
     clear: both;
+}
+
+.text-center {
+    text-align: center !important;
 }
 
 .white-text {
     color: white !important;
 }
 
+.text-h-center {
+    transform: translateY(50%);
+}
+
+.mg-8-0 {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.mg-16-0 {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
 .open {
     display: flex !important;
+}
+
+.btn {
+    border: none;
+    font-family: 'Segoe UI';
+    margin: 0 8px;
+    width: calc(100% - 16px);
+    color: white;
+    background: black;
+    padding: 10px 0;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.3333%;
 }
 
 
@@ -32,6 +96,9 @@ html {
 3. Màu sắc
 4. Kiểu dáng (kiểu chữ, tròn vuông)
 */
+
+
+/* main */
 
 #main {}
 
@@ -175,17 +242,16 @@ html {
     width: 800px;
     margin: 0 auto;
     padding: 64px 0;
-    text-align: center;
 }
 
-.section-content .header-content {
+.header-content {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.section-content .subheader-content {
+.subheader-content {
     font-weight: 400;
     opacity: 0.7;
     font-size: 0.9rem;
@@ -203,15 +269,9 @@ html {
 /* member list */
 
 .member-list {
-    margin: 3rem 0;
+    margin-top: 30px;
     /* Xử lý tương tự clear: both xử lý lỗi float: left */
     /* overflow: hidden;  */
-}
-
-.member-list .member-item {
-    display: inline;
-    float: left;
-    width: calc(100%/3);
 }
 
 .member-list .member-name {
@@ -269,29 +329,22 @@ html {
 /* hiring place */
 
 .hiring-content .place-list {
-    margin: 20px -13px;
-    display: flex;
-}
-
-.place-list .place-item {
-    margin: 0 auto;
-    float: left;
-    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: left;
-    font-size: 1rem;
 }
 
-.place-item .img-place {
+.place-list .img-place {
     width: 100%;
     display: block;
 }
 
-.place-item .img-place:hover {
+.place-list .img-place:hover {
     opacity: 70%;
     /* cursor: pointer; */
 }
 
-.place-item .place-info {
+.place-list .place-info {
     /* height: 60%; */
     padding: 16px;
     background-color: #fff;
@@ -314,25 +367,64 @@ html {
     line-height: 1.4;
 }
 
-.place-info .apply-btn {
-    background-color: black;
-    color: #fff;
+
+/* feature */
+
+.feature-content {
+    padding: 64px 0;
+}
+
+.feature-content .function {
+    margin-left: 30%;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    word-spacing: 1px;
+}
+
+.feature-content .title {
+    margin-left: 30%;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 350px;
+}
+
+.feature-content .discription {
+    margin-left: 30%;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    max-width: 400px;
+}
+
+.form-control {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.send-feedback-label {
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+#footer {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(-35deg, #30d058 0%, #1795cf 7%, #000 40%);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#footer a {
     text-decoration: none;
-    padding: 8px 12px;
-    margin: 8px 0;
-    border-radius: 0.3rem;
-    line-height: 1rem;
-    margin-left: 28%;
-    border: none;
-    font-family: 'Segoe UI';
 }
 
-.place-info .apply-btn:hover {
-    color: #000;
-    background-color: #ccc;
+#footer i[class*="ti-"] {
+    color: #ddd;
 }
-
-#footer {}
 
 
 /* modal */
