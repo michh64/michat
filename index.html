@@ -188,7 +188,7 @@
                                     <input type="text" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mg-16-0">
+                            <div class="row mg-64-0">
                                 <input class="btn text-center" type="submit" value="Send feedback"></input>
                             </div>
                         </form>
@@ -203,76 +203,76 @@
 
             </div>
 
-            <div class="clear"></div>
-            <div id="footer">
-                <!-- <a href=""><i class="ti-facebook"></i></a>
+        </div>
+        <div class="clear"></div>
+        <div id="footer">
+            <!-- <a href=""><i class="ti-facebook"></i></a>
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-youtube"></i></a> -->
-                <p class="copyright">© Michat 2022</p>
-            </div>
-
+            <p class="copyright">© Michat 2022</p>
         </div>
 
-        <div class="modal">
-            <div class="modal-container js-modal-container">
-                <div class="modal-close js-modal-close">
-                    <i class="ti-close"></i>
-                </div>
+    </div>
+    <div class="modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
 
-                <header class="modal-header">
-                    <i class="header-icon ti-write"></i> Infomation
-                </header>
+            <header class="modal-header">
+                <i class="header-icon ti-write"></i> Infomation
+            </header>
 
-                <div class="modal-body">
-                    <label for="modal-name" class="modal-label">
+            <div class="modal-body">
+                <label for="modal-name" class="modal-label">
                     <i class="ti-id-badge"></i>
                      Name
                 </label>
-                    <input type="text" id="modal-name" class="modal-input" placeholder="Your name...">
+                <input type="text" id="modal-name" class="modal-input" placeholder="Your name...">
 
-                    <label for="modal-email" class="modal-label">
+                <label for="modal-email" class="modal-label">
                     <i class="ti-email"></i>
                      Email
                 </label>
-                    <input type="email" id="modal-email" class="modal-input" placeholder="Your email...">
+                <input type="email" id="modal-email" class="modal-input" placeholder="Your email...">
 
-                    <button id="sent-btn">
+                <button id="sent-btn">
                     Send 
                     <i class="ti-upload"></i>
                 </button>
-                </div>
-
-                <footer class="modal-footer">
-                    <p class="model-help">Need <a href="#">help</a>?</p>
-                </footer>
             </div>
+
+            <footer class="modal-footer">
+                <p class="model-help">Need <a href="#">help</a>?</p>
+            </footer>
         </div>
+    </div>
 
-        <script>
-            const applyBtns = document.querySelectorAll('.js-apply-btn')
-            const modal = document.querySelector('.modal')
-            const close = document.querySelector('.js-modal-close')
-            const modalContainer = document.querySelector('.js-modal-container')
+    <script>
+        const applyBtns = document.querySelectorAll('.js-apply-btn')
+        const modal = document.querySelector('.modal')
+        const close = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
 
-            function showApplyNow() {
-                modal.classList.add('open')
-            }
+        function showApplyNow() {
+            modal.classList.add('open')
+        }
 
-            function hideApplyNow() {
-                modal.classList.remove('open')
-            }
+        function hideApplyNow() {
+            modal.classList.remove('open')
+        }
 
-            for (const applyBtn of applyBtns) {
-                applyBtn.addEventListener('click', showApplyNow)
-            }
+        for (const applyBtn of applyBtns) {
+            applyBtn.addEventListener('click', showApplyNow)
+        }
 
-            close.addEventListener('click', hideApplyNow)
-            modal.addEventListener('click', hideApplyNow)
+        close.addEventListener('click', hideApplyNow)
+        modal.addEventListener('click', hideApplyNow)
 
-            modalContainer.addEventListener('click', function(event) {
-                event.stopPropagation()
-            })
-        </script>
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>
