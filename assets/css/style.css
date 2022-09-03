@@ -8,6 +8,10 @@
     color: white !important;
 }
 
+.open {
+    display: flex !important;
+}
+
 
 /* reset css */
 
@@ -225,7 +229,7 @@ html {
 /* hiring */
 
 .hiring-content {
-    background-image: linear-gradient(65deg, #30d058 0%, #1795cf 5%, #000 20%);
+    background-image: linear-gradient(-75deg, #30d058 0%, #1795cf 7%, #000 40%);
 }
 
 .hiring-content .hiring-list {
@@ -264,7 +268,7 @@ html {
 
 /* hiring place */
 
-.hiring-section .place-list {
+.hiring-content .place-list {
     margin: 20px -13px;
     display: flex;
 }
@@ -305,8 +309,8 @@ html {
 }
 
 .place-info .description {
-    margin: 10px 0;
-    height: 75px;
+    margin: 20px 0;
+    /* height: 75px; */
     line-height: 1.4;
 }
 
@@ -315,10 +319,12 @@ html {
     color: #fff;
     text-decoration: none;
     padding: 8px 12px;
-    margin: 15px 0;
+    margin: 8px 0;
     border-radius: 0.3rem;
     line-height: 1rem;
     margin-left: 28%;
+    border: none;
+    font-family: 'Segoe UI';
 }
 
 .place-info .apply-btn:hover {
@@ -327,3 +333,112 @@ html {
 }
 
 #footer {}
+
+
+/* modal */
+
+.modal {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-container .modal-header {
+    background: linear-gradient(-35deg, #30d058 0%, #1795cf 50%);
+    color: #fff;
+    text-transform: uppercase;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modal-container .header-icon {
+    margin: 0 16px;
+}
+
+.modal-container .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 12px;
+    color: #fff;
+}
+
+.modal-container .modal-close:hover {
+    background: rgba(255, 38, 38, 0.9);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-body .modal-label {
+    display: block;
+    margin: 12px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.modal-body .modal-input {
+    margin-bottom: 16px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.modal-body #sent-btn {
+    margin: 12px 0 0;
+    width: 100%;
+    border: none;
+    color: white;
+    background: linear-gradient(-35deg, #30d058 0%, #1795cf 50%);
+    padding: 16px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.modal-body #sent-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a {
+    color: #1795cf;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

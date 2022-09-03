@@ -102,7 +102,7 @@
                                 <h3 class="hiring-position">Java Developer</h3>
                                 <P class="place-text">Ho Chi Minh City</P>
                                 <p class="description">2+ years experience at server-side languages such as Java</p>
-                                <a href="#" class="apply-btn">Apply now</a>
+                                <button class="apply-btn js-apply-btn">Apply now</button>
                             </div>
                         </div>
 
@@ -112,17 +112,17 @@
                                 <h3 class="hiring-position">Graphic Designer</h3>
                                 <p class="place-text">Da Nang City</p>
                                 <p class="description">Good use of Illustrator, Photoshop,... related basic applications</p>
-                                <a href="#" class="apply-btn">Apply now</a>
+                                <button class="apply-btn js-apply-btn">Apply now</button>
                             </div>
                         </div>
 
                         <div class="place-item">
                             <img class="img-place" src="assets/img/place-img/place-3.png" alt="Ha Noi City">
                             <div class="place-info">
-                                <h3 class="hiring-position">Talent Acquisition Intern</h3>
+                                <h3 class="hiring-position">Automation Tester</h3>
                                 <p class="place-text">Ha Noi City</p>
-                                <p class="description">Proficiency in all Microsoft Office applications</p>
-                                <a href="#" class="apply-btn">Apply now</a>
+                                <p class="description">1+ years experience in manual test Web, App Mobile</p>
+                                <button class="apply-btn js-apply-btn">Apply now</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -141,7 +141,69 @@
         <div id="footer">
 
         </div>
+
     </div>
+
+    <div class="modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="header-icon ti-write"></i> Infomation
+            </header>
+
+            <div class="modal-body">
+                <label for="modal-name" class="modal-label">
+                    <i class="ti-id-badge"></i>
+                     Name
+                </label>
+                <input type="text" id="modal-name" class="modal-input" placeholder="Your name...">
+
+                <label for="modal-email" class="modal-label">
+                    <i class="ti-email"></i>
+                     Email
+                </label>
+                <input type="email" id="modal-email" class="modal-input" placeholder="Your email...">
+
+                <button id="sent-btn">
+                    Send 
+                    <i class="ti-upload"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="model-help">Need <a href="#">help</a>?</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const applyBtns = document.querySelectorAll('.js-apply-btn')
+        const modal = document.querySelector('.modal')
+        const close = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function showApplyNow() {
+            modal.classList.add('open')
+        }
+
+        function hideApplyNow() {
+            modal.classList.remove('open')
+        }
+
+        for (const applyBtn of applyBtns) {
+            applyBtn.addEventListener('click', showApplyNow)
+        }
+
+        close.addEventListener('click', hideApplyNow)
+        modal.addEventListener('click', hideApplyNow)
+
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>
