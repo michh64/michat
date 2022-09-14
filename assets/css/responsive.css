@@ -1,16 +1,17 @@
 /* 
-pc >= 1024 > tablet >= 740px > mobile
+pc >= 1024px > tablet >= 740px > mobile
+pc >= 64em > tablet >= 46.25em > mobile
 */
 
 /* pc */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     #header .mobile-menu-btn {
         display: none;
     }
 }
 
 /* tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
 
     .btn {
         padding: 12px 0;
@@ -50,7 +51,7 @@ pc >= 1024 > tablet >= 740px > mobile
 }
 
 /* mobile */
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
     .s-mg-64-0 {
         margin-top: 64px !important;
         margin-bottom: 64px !important;
