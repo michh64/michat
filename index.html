@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michat</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- phải đặt file responsive dưới file style vì độ ưu tiên CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css"> 
     <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
@@ -45,7 +47,11 @@
 
             <!-- Begin search -->
             <div class="search-btn">
-                <i class="search-icon ti-search"></i>
+                <i class="header-icon ti-search"></i>
+            </div>
+
+            <div class="mobile-menu-btn">
+                <i class="header-icon ti-menu"></i>
             </div>
             <!-- End search -->
 
@@ -58,7 +64,6 @@
                 <div class="text-content">Hang out anytime, anywhere</div>
             </div>
         </div>
-
         <div id="content">
             <!-- ABOUT TEAM -->
             <div id="about" class="section-content">
@@ -66,20 +71,19 @@
                 <p class="subheader-content text-center">Connected everyone</p>
                 <p class="text-content">You know that you have the right teamwork for the job when your team delivers better outcomes than any one person could on their own. Achieving a goal is often easier when tasks are done cooperatively rather than relying on each individual’s
                     singular efforts. An entire team operates best when each team member works collaboratively but still brings their own perspective and experiences and uses their own set of skills.</p>
-                <div class="member-list">
-                    <div class="col col-3 text-center">
+                <div class="member-list row">
+                    <div class="s-col-1 mg-16-0 col col-3-1 text-center">
                         <p class="member-name">Nguyễn Hà Đông</p>
                         <img class="member-img" src="./assets/img/mem-img/mem-1.png" alt="Nguyễn Hà Đông">
                     </div>
-                    <div class="col col-3 text-center">
+                    <div class="s-col-1 mg-16-0 col col-3-1 text-center">
                         <p class="member-name">Nguyễn Như Trung</p>
                         <img class="member-img" src="./assets/img/mem-img/mem-2.png" alt="Nguyễn Như Trung">
                     </div>
-                    <div class="col col-3 text-center">
+                    <div class="s-col-1 mg-16-0 col col-3-1 text-center">
                         <p class="member-name">Phạm Huy Hoàng</p>
                         <img class="member-img" src="./assets/img/mem-img/mem-3.png" alt="Phạm Huy Hoàng">
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -95,8 +99,8 @@
                         <li>Vietnam <span class="quantity">3</span></li>
                     </ul>
 
-                    <div class="row place-list">
-                        <div class="col col-3">
+                    <div class="place-list row">
+                        <div class="col col-3-1 mg-8-0 s-col-1">
                             <img class="img-place" src="assets/img/place-img/place-1.png" alt="Ho Chi Minh City">
                             <div class="place-info">
                                 <h3 class="hiring-position">Java Developer</h3>
@@ -106,7 +110,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3-1 mg-8-0 s-col-1">
                             <img class="img-place" src="assets/img/place-img/place-2.png" alt="Da Nang City">
                             <div class="place-info">
                                 <h3 class="hiring-position">Graphic Designer</h3>
@@ -116,103 +120,135 @@
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3-1 mg-8-0 s-col-1">
                             <img class="img-place" src="assets/img/place-img/place-3.png" alt="Ha Noi City">
                             <div class="place-info">
                                 <h3 class="hiring-position">Automation Tester</h3>
                                 <p class="place-text">Ha Noi City</p>
-                                <p class="description">Degree in Computer Science and 1+ years experience in manual test Web</p>
+                                <p class="description">Degree in Computer Science and 1+ years experience in test Web</p>
                                 <button class="btn js-apply-btn">Apply now</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
 
             <!-- FEATURES -->
-            <div id="features" class="feature-content">
+            <div id="features">
                 <h2 class="header-content text-center">Features</h2>
                 <p class="subheader-content text-center">More ways to stay connected</p>
+                
+                <div class="section-feature-content">
+                
+                    <div class="row s-mg-64-0">
+                        <div class="col col-2 s-col-1">
+                            <img src="assets/img/features/feature-1.png" alt="chat" class="img-feature col-1">
+                        </div>
 
-                <div class="row">
-                    <div class="col col-2 text-h-center">
-                        <p class="function">Chat together</p>
-                        <p class="title">Express yourself</p>
-                        <p class="discription">Michat has everything you need to feel closer to your favourite people.</p>
-                    </div>
-
-                    <div class="col col-2">
-                        <img src="assets/img/features/feature-1.png" alt="chat" class="col-1">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-2">
-                        <img src="assets/img/features/feature-2.png" alt="chat" class="col-1">
-                    </div>
-
-                    <div class="col col-2 text-h-center">
-                        <p class="function">Custom reactions</p>
-                        <p class="title">Say it with any emoji</p>
-                        <p class="discription">Lost for words? Now you can customise your reactions with way more emojis to choose from, including 🎉 and 🔥.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-2 text-h-center">
-                        <p class="function">Replies and forwarding</p>
-                        <p class="title">Let the conversation flow</p>
-                        <p class="discription">Choose the exact message that you want to reply to or forward, directly in your chat.</p>
-                    </div>
-
-                    <div class="col col-2">
-                        <img src="assets/img/features/feature-3.png" alt="chat" class="col-1">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-2" style="padding-left: 150px;">
-                        <div class="send-feedback-label text-center">Feedback box</div>
-                        <form action="">
-                            <div class="row mg-16-0">
-                                <div class="col col-2">
-                                    <input type="text" placeholder="Name" required id="" class="form-control">
-                                </div>
-                                <div class="col col-2">
-                                    <input type="email" placeholder="Email" required id="" class="form-control">
-                                </div>
+                        <div class="col col-2 s-col-1">
+                            <div class="feature-content">
+                                <p class="function">Chat together</p>
+                                <p class="title">Express yourself</p>
+                                <p class="discription">Michat has everything you need to feel closer to your favourite people.</p>
                             </div>
-                            <div class="row mg-16-0">
-                                <div class="col col-1">
-                                    <input type="text" placeholder="Message" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mg-64-0">
-                                <input class="btn text-center" type="submit" value="Send feedback"></input>
-                            </div>
-                        </form>
+                        </div>
                     </div>
+                
+                    <div class="row s-mg-64-0">
+                        <div class="col col-2 s-col-1">
+                            <div class="feature-content">
+                                <p class="function">Custom reactions</p>
+                                <p class="title">Say it with any emoji</p>
+                                <p class="discription">Lost for words? Now you can customise your reactions with way more emojis to
+                                    choose from, including 🎉 and 🔥.</p>
+                            </div>
+                        </div>
 
-                    <div class="col col-2 text-h-center">
-                        <p class="function">Feedback</p>
-                        <p class="title">Do you want to improve us?</p>
-                        <p class="discription">We always listen to your feedback and try to do what's best for your convenience.</p>
+                        <div class="col col-2 s-col-1">
+                            <img src="assets/img/features/feature-2.png" alt="chat" class="img-feature col-1">
+                        </div>
+                    </div>
+                
+                    <div class="row s-mg-64-0">
+                        <div class="col col-2 s-col-1">
+                            <img src="assets/img/features/feature-3.png" alt="chat" class="img-feature col-1">
+                        </div>
+
+                        <div class="col col-2 s-col-1">
+                            <div class="feature-content">
+                                <p class="function">Replies and forwarding</p>
+                                <p class="title">Let the conversation flow</p>
+                                <p class="discription">Choose the exact message that you want to reply to or forward, directly in your
+                                    chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row s-mgt-64 mgt-32">
+
+                        <div class="col col-2 s-col-1">
+                            <div class="feedback-content feature-content">
+                                <p class="function">Feedback</p>
+                                <p class="title">Do you want to improve us?</p>
+                                <p class="discription">We always listen to your feedback and try to do what's best for your convenience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col col-2 s-col-1" style="margin: 0 auto;">
+                            <div class="send-feedback-label text-center">Feedback box</div>
+                            <form action="" class="feedback-form">
+                                <div class="row mg-16-0">
+                                    <div class="col col-2 s-col-1">
+                                        <input type="text" placeholder="Name" required id="" class="form-control">
+                                    </div>
+                                    <div class="col col-2 s-col-1 s-mgt-16">
+                                        <input type="email" placeholder="Email" required id="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mg-16-0">
+                                    <div class="col col-1">
+                                        <input type="text" placeholder="Message" required id="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input class="btn text-center" type="submit" value="Send feedback"></input>
+                                </div>
+                            </form>
+
+                            <div class="send-feedback-label text-center">Or contact us via</div>
+                            <div class="contact-info">
+                                <p class="contact-item">
+                                    <i class="contact-icon ti-location-pin"></i>
+                                    <span class="contact-bold">Address:</span> Hanoi, Vietnam
+                                </p>
+                                <p class="contact-item">
+                                    <i class="contact-icon ti-mobile"></i>
+                                    <span class="contact-bold">Phone:</span> 
+                                    <a href="tel:+84909055555">(+84) 9090 55555</a>
+                                </p>
+                                <p class="contact-item">
+                                    <i class="contact-icon ti-email"></i>
+                                    <span class="contact-bold">Email:</span> 
+                                    <a href="mailto:help@michat.com">help@michat.com</a>
+                                </p>
+                            </div>
+
+                        </div>
+                
                     </div>
                 </div>
 
             </div>
 
         </div>
-        <div class="clear"></div>
+
         <div id="footer">
-            <!-- <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-youtube"></i></a> -->
             <p class="copyright">© Michat 2022</p>
         </div>
 
     </div>
+    
     <div class="modal">
         <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close">
@@ -248,31 +284,7 @@
         </div>
     </div>
 
-    <script>
-        const applyBtns = document.querySelectorAll('.js-apply-btn')
-        const modal = document.querySelector('.modal')
-        const close = document.querySelector('.js-modal-close')
-        const modalContainer = document.querySelector('.js-modal-container')
-
-        function showApplyNow() {
-            modal.classList.add('open')
-        }
-
-        function hideApplyNow() {
-            modal.classList.remove('open')
-        }
-
-        for (const applyBtn of applyBtns) {
-            applyBtn.addEventListener('click', showApplyNow)
-        }
-
-        close.addEventListener('click', hideApplyNow)
-        modal.addEventListener('click', hideApplyNow)
-
-        modalContainer.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

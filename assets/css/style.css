@@ -1,9 +1,5 @@
 /* common css */
 
-.clear {
-    clear: both;
-}
-
 .text-center {
     text-align: center !important;
 }
@@ -26,13 +22,21 @@
     margin-bottom: 16px !important;
 }
 
-.mg-64-0 {
-    margin-top: 16px !important;
-    margin-bottom: 64px !important;
+.mg-32-0 {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+}
+
+.mgt-32 {
+    margin-top: 32px !important;
 }
 
 .open {
     display: flex !important;
+}
+
+p {
+    line-height: 1.6;
 }
 
 .btn {
@@ -63,6 +67,10 @@
     clear: both;
 }
 
+.clear {
+    clear: both;
+}
+
 .col {
     float: left;
     padding-left: 8px;
@@ -77,8 +85,12 @@
     width: 50%;
 }
 
-.col-3 {
+.col-3-1 {
     width: 33.3333%;
+}
+
+.col-3-2 {
+    width: 66.6667%;
 }
 
 
@@ -106,7 +118,10 @@ html {
 
 /* main */
 
-#main {}
+
+#main {
+    overflow: hidden;
+}
 
 
 /* ------------------ Header ------------------ */
@@ -180,14 +195,21 @@ html {
 
 #header .search-btn:hover {
     background-color: #f44336;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-#header .search-btn {
-    float: right;
+#header .mobile-menu-btn:hover {
+    background-color: #31313183;
 }
 
-.search-btn .search-icon {
+#header .search-btn,
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .header-icon {
     font-size: 18px;
     font-weight: bolder;
     color: #fff;
@@ -240,13 +262,14 @@ html {
 
 #content {
     background-color: #ffffff;
-    height: 1000px;
+    /* height: 1000px; */
 }
 
 #content .section-content {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 64px 16px;
 }
 
 .header-content {
@@ -334,7 +357,7 @@ html {
 /* hiring place */
 
 .hiring-content .place-list {
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -375,32 +398,53 @@ html {
 
 /* feature */
 
-.feature-content {
+#features {
     padding: 64px 1%;
 }
+#features .section-feature-content {
+    width: 80%;
+    margin: 0 auto;
+}
 
-.feature-content .function {
-    margin-left: 30%;
+#features .feature-content {
+    margin: 0 auto;
+    width: 50%;
+    height: 40vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#features .function {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
     word-spacing: 1px;
 }
 
-.feature-content .title {
-    margin-left: 30%;
-    font-size: 40px;
+#features .title {
+    font-size: 36px;
     font-weight: 600;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 350px;
 }
 
-.feature-content .discription {
-    margin-left: 30%;
+#features .discription {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
-    max-width: 400px;
+}
+
+#features .img-feature {
+    object-fit: contain;
+    height: 40vw;
+}
+
+/* feedback */
+
+.feedback-form{
+    width: 70%;
+    margin: 0 auto;
 }
 
 .form-control {
@@ -409,13 +453,55 @@ html {
     border: 1px solid #ccc;
 }
 
-.send-feedback-label {
-    font-weight: 500;
-    font-size: 24px;
-    margin-top: 100px;
+    #features .feedback-content {
+        margin-top: 15%;
+    height: auto;
 }
 
+.send-feedback-label {
+    margin-top: 28px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.contact-info{
+    margin-top: 8px;
+    text-align: center;
+}
+
+.contact-info .contact-item{
+    line-height: 2;
+    display: block;
+
+}
+
+.contact-info .contact-icon{
+    font-weight: 800;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.contact-info .contact-bold{
+    font-weight: 500;
+}
+
+.contact-info .contact-item a {
+    color: rgb(1, 0, 8);
+    opacity: 0.9;
+}
+
+.contact-info .contact-item a:hover {
+    color: rgb(1, 0, 8);
+    opacity: 1;
+}
+
+
+/* footer */
+
 #footer {
+    width: 100%;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(-35deg, #30d058 0%, #1795cf 7%, #000 40%);
     padding: 15px 0;
@@ -432,11 +518,12 @@ html {
 
 #footer i[class*="ti-"] {
     color: #ddd;
-}
+} */
 
 #footer .copyright {
-    margin-top: 10px;
-} */
+    font-size: 0.9rem;
+    /* margin-top: 10px; */
+}
 
 
 /* modal */
